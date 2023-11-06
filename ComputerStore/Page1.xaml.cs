@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ComputerStore
 {
     /// <summary>
-    /// Логика взаимодействия для Profile.xaml
+    /// Логика взаимодействия для Page1.xaml
     /// </summary>
-    public partial class Profile : Page
+    public partial class Page1 : Page
     {
-        public Profile()
+        public Page1()
         {
             InitializeComponent();
         }

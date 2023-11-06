@@ -14,6 +14,14 @@
                         <TextBlock Margin="3">Каталог</TextBlock>
                     </StackPanel>
                 </TabItem.Header>
+                <TabItem.Content>
+                    <Frame x:Name="catalogFrame"></Frame>
+                    <!--<Grid>
+                        <Grid.ColumnDefinitions>
+                            
+                        </Grid.ColumnDefinitions>
+                    </Grid>-->
+                </TabItem.Content>
             </TabItem>
             <TabItem x:Name="basket">
                 <TabItem.Header>

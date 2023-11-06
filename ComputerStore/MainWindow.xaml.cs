@@ -23,7 +23,6 @@ namespace ComputerStore
         public MainWindow()
         {
             InitializeComponent();
-            catalog.Content = new Catalog();
         }
     }
 }

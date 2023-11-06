@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ComputerStore
@@ -18,7 +17,7 @@ namespace ComputerStore
     /// <summary>
     /// Логика взаимодействия для Catalog.xaml
     /// </summary>
-    public partial class Catalog : Page
+    public partial class Catalog : Window
     {
         public Catalog()
         {
