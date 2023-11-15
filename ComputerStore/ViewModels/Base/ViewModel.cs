@@ -27,7 +27,13 @@ namespace ComputerStore.ViewModels.Base
         }
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Dispose(true);
+        }
+
+        private bool _Disposed;
+        protected virtual void Dispose(bool Disposing)
+        {
+            if (!Disposing || _Disposed) return;
         }
     }
 }
