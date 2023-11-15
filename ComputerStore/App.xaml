@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:ComputerStore"
              StartupUri="Views/Windows/MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="Title" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Resourses/Fonts/Shentox-Regular (RUS by Slavchansky)_0.ttf"/>
+        </Style>
     </Application.Resources>
 </Application>

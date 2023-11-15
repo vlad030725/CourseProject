@@ -3,29 +3,61 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ComputerStore"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TabControl x:Name="navigationPanel">
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:vm="clr-namespace:ComputerStore.ViewModels"
+        xmlns:cmd="clr-namespace:ComputerStore.Infrastructure.Commands"
+        xmlns:l="clr-namespace:ComputerStore"
+        Title="{Binding Title}"
+        mc:Ignorable="d" Height="600" Width="920"
+        Background="#272537">
+    <!--Title="{Binding Title}" Height="450" Width="800"-->
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+    <Border Background="#272537"
+            CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="VladPC"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="Snow"
+                       FontSize="22"
+                       Style="{StaticResource Title}"/>
+        </Grid>
+        
+    </Border>
+    <!--<Grid>
+        <TabControl x:Name="navigationPanel" TabStripPlacement="Left" HorizontalContentAlignment="Left" >
             <TabItem x:Name="catalog">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="3">Каталог</TextBlock>
+                        <fa:ImageAwesome Icon="Bars" Height="13" VerticalAlignment="Center" Margin="3"/>
+                        <TextBlock Margin="3" VerticalAlignment="Center">Каталог</TextBlock>
                     </StackPanel>
                 </TabItem.Header>
                 <TabItem.Content>
+                    
                     <Frame x:Name="catalogFrame"></Frame>
-                    <!--<Grid>
+                    --><!--<Grid>
                         <Grid.ColumnDefinitions>
                             
                         </Grid.ColumnDefinitions>
-                    </Grid>-->
+                    </Grid>--><!--
                 </TabItem.Content>
             </TabItem>
             <TabItem x:Name="basket">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="ShoppingCart" Height="13" VerticalAlignment="Center" Margin="3"/>
                         <TextBlock Margin="3">Корзина</TextBlock>
                     </StackPanel>
                 </TabItem.Header>
@@ -33,10 +65,19 @@
             <TabItem x:Name="profile">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="User" Height="13" VerticalAlignment="Center" Margin="3"/>
                         <TextBlock Margin="3">Профиль</TextBlock>
                     </StackPanel>
                 </TabItem.Header>
             </TabItem>
+            <TabItem x:Name="exit">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="ArrowLeft" Height="13" VerticalAlignment="Center" Margin="3"/>
+                        <TextBlock Margin="3">Выход</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
         </TabControl>
-    </Grid>
+    </Grid>-->
 </Window>
